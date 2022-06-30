@@ -1,9 +1,14 @@
 import  React  from "react";
+import { useParams } from "react-router-dom"
 class Crear extends React.Component {
     constructor(props) {
         super(props);
         this.state = {  }
     }
+
+   
+    
+   
     render() { 
         return ( <div className="card">
             <div className="card-header">

@@ -22,24 +22,28 @@ const ResultadoMercado = () => {
             {results.map((rr) =>
                
                 
-                <div className="tarjeta">
-                    <div  key={rr.id} className="card">
-                        <img src={rr.thumbnail} className="img_list" ></img>
-                        <div  key={rr.id} className="card-body">
-                            <span  className="card-title">
-                                ${rr.price}
-                            </span> 
-                            
-                            <div >
-                            <img src={ic_shipping}  id="icono_envio" ></img>eded
-                            </div>
+                <div key={rr.id}  className="tarjeta">
+                    <Link style={{textDecoration: 'none'}} id="link_tarjeta" to={"/items/"+rr.id}>
+                        <div  key={rr.id} className="card">
+                            <img src={rr.thumbnail} className="img_list" >
+
+                            </img>
+
+                            <div  key={rr.id} className="card-body">
+                                <span  className="card-title">
+                                    ${rr.price} <img src={ic_shipping}  id="icono_envio" ></img>
+                                </span> 
+
+                                <p className="card-text">
+                                    {rr.title}
+                                </p>
+                                <p>
+                                    Completo Único!
+                                </p>
                                 
-                            <p className="card-text">
-                            {rr.title}
-                            </p>
-                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             
                 )}

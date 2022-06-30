@@ -19,7 +19,7 @@ const MercadoProvider = ({children}) => {
         })
     }
 
-    const consultarClima = async datos => {
+    const consultarMercado = async datos => {
         try{
             const { ciudad} = datos         
 
@@ -38,7 +38,7 @@ const MercadoProvider = ({children}) => {
         <MercadoContext.Provider 
         value={{busqueda, 
             datosBusqueda,
-            consultarClima,
+            consultarMercado,
             resultado
         }}
         >

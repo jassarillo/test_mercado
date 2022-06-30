@@ -6,7 +6,7 @@ body {
   
 }
 header {
-  background-color: #0ea5e9;
+  background-color: #FFE600;
   padding: 1.5rem;
   /*border-bottom: 1rem solid #0284c7;*/
 }
@@ -300,3 +300,8 @@ height: 180px;
   height: 15px;
   width: 15px;
 }
+#link_tarjeta{
+text-d: 'none';
+color: #020202
+}
+
