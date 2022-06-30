@@ -12,7 +12,7 @@ const ResultadoMercado = () => {
         <>
            
             <div className="row row_ruta_articulo">
-            <div className="col-lg-1">
+            <div className="col-lg-2">
             </div>
                 <div className="col-lg-8">
                 Resultados>blablaca>rbbbbb>bgbgbgbg
@@ -20,11 +20,11 @@ const ResultadoMercado = () => {
             </div>
           
               
-            {results.map((rr) =>
+            {results.slice(0, 4).map((rr) =>
                
                 <div className="row ">
-                    
-                    <div className="col-lg-11">  
+                     <div className="col-lg-1"></div>
+                    <div className="col-lg-9">  
                         <div key={rr.id}  className="tarjeta">
                             <Link style={{textDecoration: 'none'}} id="link_tarjeta" to={"/items/"+rr.id}>
                                 <div  key={rr.id} className="card">

@@ -6,8 +6,8 @@ body {
   
 }
 header {
-  background-color: #00a6ff;
-  /*background-color: #FFE600;*/
+  /*background-color: #00a6ff;*/
+  background-color: #FFE600;
   padding: 1.5rem;
   /*border-bottom: 1rem solid #0284c7;*/
 }
@@ -323,7 +323,7 @@ color: #020202
 }
 
 .img-detalle{
-  width: 100%;
+  width: 1600px !important;
 }
 
 .text-price{
@@ -331,4 +331,24 @@ color: #020202
   flex: 1 1 auto;
   padding: 1.25rem;
   text-align: right;
+}
+
+.img-detalle{
+  float: left;
+  position: fixed;
+  width: 130%;
+  
+}
+
+.card-text{
+  font-weight: bold;
+}
+.card-text-price{
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.text-grey{
+  color: #999999;
+  text-align: justify;
 }

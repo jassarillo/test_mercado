@@ -3,6 +3,7 @@ import  useMercado  from "../hooks/useMercado"
 import React from 'react'
 import logo_mercado from '../assets/Logo_ML.png' 
 import {useParams} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
  const ItemDescripcion =  () => {
     
@@ -37,12 +38,14 @@ import {useParams} from 'react-router-dom'
             <div >
           
             <div className="row">
-                <div className="col-lg-1"></div>
-                    <div className="col-lg-10">    
+                <div className="col-lg-2"></div>
+                    <div className="col-lg-8">    
                         <form onSubmit={handleSubmit} >
                                 <div className="row">
                                 <div className="col-lg-1">
+                                <Link  to={"/"}>
                                 <img src={logo_mercado} className="nav-img" width="60" height="40"  ></img>
+                                </Link>
                                 </div>
                                 <div className="col-lg-11">
                                     <div className="input-group">
@@ -74,13 +77,13 @@ import {useParams} from 'react-router-dom'
                 </div>
             </div>
             </header><div className="row row_ruta_articulo">
-            <div className="col-lg-1">
+            <div className="col-lg-2">
             </div>
                 <div className="col-lg-8">
-                Resultados>blablaca>rbbbbb>bgbgbgbg
+                {detalle.domain_id}>{detalle.listing_type_id}>{detalle.condition}
                 </div>
             </div>
-
+    
 
 
 
@@ -88,55 +91,56 @@ import {useParams} from 'react-router-dom'
             
           
                 <div className='row'>
-                <div className='col-lg-1'> </div>
-                    <div className='col-lg-10'>  
+                <div className='col-lg-2'> </div>
+                    <div className='col-lg-8'>  
                     <div className='leftDiv'>                      
                                 <div   className="card im-detalle">
+                                    <div   className="card-body">
+                                    <div className='img-detalle'>
                                     <img src={detalle.secure_thumbnail} className="img_list"  >
                                     </img>
-                                    <div   className="card-body">
+                                    </div>
                                         <div className='text-price'>
-                                                <p className="card-text">
+                                                <p >
                                                     {detalle.condition}-Disponibles: {detalle.available_quantity}
                                                 </p>
-                                              
+                                                <div className='row'>
                                                 <p className="card-text">
                                                     {detalle.title}
                                                 </p>
-                                                  <span >
+                                                </div>
+                                                  <p className="card-text-price">
                                                     ${detalle.price} 
-                                                </span> 
+                                                </p> 
                                                 <p>
                                                    <input type='button' className="btn btn-primary" value="Comprar"/>
                                                 </p>
                                         </div>
                                         <div className='detalle-descripcion'>
-                                            <p>frfreferfre febtyb jiy mui m imuimu mum imitm ymymym ymym ymy ymym ymy mmy mymm yhyhhu j jn ibhkhggusdtfcdtyfc cfty fctyfsdtycfsctdf cstcfdt sftdcft few7e td8toqipuwe09uue9qu epup  upwqi upe qype q</p>
+                                            <p></p>
+                                            <p></p>
+                                            <p></p>
+                                            <p></p>
+                                            <h2>Descripción del producto</h2>
+                                            <div className='row'>
+                                                <div className='col-lg-9'>
+                                                    <p className='text-grey'>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                             been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                              galley of type and scrambled it to make a type specimen book. It has survived not only 
+                                              five centuries, but also the leap into electronic typesetting, remaining essentially
+                                               unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                                                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+                                                PageMaker including versions of Lorem Ipsum.
+                                                </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>                    
                     </div>
                     </div> 
-                    {/*<div className='col-lg-1'> 
-                    <div className='rightDiv'>
-                                <div   className="card">
-                                
-                                    <div   className="card-body">
-                                        <span  className="card-title">
-                                            ${detalle.price} <img src=''  id="icono_envio" ></img>
-                                        </span> 
-                                        <p className="card-text">
-                                            {detalle.title}
-                                        </p>
-                                        <p>
-                                            Completo Único!
-                                        </p>
-                                        
-                                    </div>
-                                </div>
-                
-                    </div>
-                    </div>*/}
+                    
                     <div className='col-lg-1'></div>
                 </div>
      

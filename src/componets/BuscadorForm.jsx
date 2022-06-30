@@ -24,8 +24,8 @@ const BuscadorForm = () => {
         <div >
            
             <div className="row">
-            <div className="col-lg-1"></div>
-                <div className="col-lg-10">    
+            <div className="col-lg-2"></div>
+                <div className="col-lg-8">    
                     <form onSubmit={handleSubmit} >
                             <div className="row">
                             <div className="col-lg-1">
@@ -46,7 +46,7 @@ const BuscadorForm = () => {
                                         <button
                                         type="submit" 
                                         value="Consulta Clima">
-                                            <i className="bi bi-search"  aria-label="GitHub"></i>
+                                            <i className="bi bi-search"  aria-label="mercado"></i>
                                         </button>
                                         </span>
                                     </div>
