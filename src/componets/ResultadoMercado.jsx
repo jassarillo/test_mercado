@@ -18,36 +18,42 @@ const ResultadoMercado = () => {
                 Resultados>blablaca>rbbbbb>bgbgbgbg
                 </div>
             </div>
-            <div className="content">
+          
+              
             {results.map((rr) =>
                
-                
-                <div key={rr.id}  className="tarjeta">
-                    <Link style={{textDecoration: 'none'}} id="link_tarjeta" to={"/items/"+rr.id}>
-                        <div  key={rr.id} className="card">
-                            <img src={rr.thumbnail} className="img_list" >
+                <div className="row ">
+                    
+                    <div className="col-lg-11">  
+                        <div key={rr.id}  className="tarjeta">
+                            <Link style={{textDecoration: 'none'}} id="link_tarjeta" to={"/items/"+rr.id}>
+                                <div  key={rr.id} className="card">
+                                    <img src={rr.thumbnail} className="img_list" >
 
-                            </img>
+                                    </img>
 
-                            <div  key={rr.id} className="card-body">
-                                <span  className="card-title">
-                                    ${rr.price} <img src={ic_shipping}  id="icono_envio" ></img>
-                                </span> 
+                                    <div  key={rr.id} className="card-body">
+                                        <span  className="card-title">
+                                            ${rr.price} <img src={ic_shipping}  id="icono_envio" ></img>
+                                        </span> 
 
-                                <p className="card-text">
-                                    {rr.title}
-                                </p>
-                                <p>
-                                    Completo Único!
-                                </p>
-                                
-                            </div>
+                                        <p className="card-text">
+                                            {rr.title}
+                                        </p>
+                                        <p>
+                                            Completo Único!
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                            </Link>
                         </div>
-                    </Link>
+                    </div>
+                   
                 </div>
-            
                 )}
-            </div>
+                
+            
             
             
         </>
