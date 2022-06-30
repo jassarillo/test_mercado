@@ -6,48 +6,29 @@ import {useParams} from 'react-router-dom'
 
  const ItemDescripcion =  () => {
     
-   
+    const { id } = useParams();
+        
+    const [detalle, setDetalle ] = React.useState([])
 
-        const { id } = useParams();
-        const consultarMercado = async () => {
-        const data = await fetch(`https://api.mercadolibre.com/items/${id}`)
-        const detalle = await data.json()
-       
-        //console.log(detalle)
-        }
+    React.useEffect(()=>{
         consultarMercado()
-  
+    },[])
 
-
-    //console.log(useParams());
-
-
-/*    const consultarMercado = async datos => {
-        try{
-            const { id } = useParams();
-
-            const btenerDetalle = `https://api.mercadolibre.com/items/${id}`
-            //const urlClima = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`
-            const { datos } = await axios(btenerDetalle)
-            //console.log(datos);
-            return btenerDetalle
-        }catch (error) {
-            console.log(error)
-        }
+    
+    const consultarMercado = async () => {
+    const data = await fetch(`https://api.mercadolibre.com/items/${id}`)
+    const detalle = await data.json()
+        setDetalle(detalle)
     }
-    consultarMercado()*/
-    //console.log(consultarMercado)
-
+    //consultarMercado()
+    const mercado = consultarMercado()
+    console.log(mercado)
+    // const  detalleItem =  consultarMercado()
+    // console.log(detalleItem.Promise);
 
     const handleSubmit = e => {
         e.preventDefault()
-/*
-        if(Object.values(busqueda).includes('')) {
-            setAlerta('Todos los campos son obligatorios');
-            return
-        }
 
-        consultarMercado(busqueda)*/
     }
     return (
         <>
@@ -95,6 +76,15 @@ import {useParams} from 'react-router-dom'
             </header>
             {/*resultado?.query && <ResultadoMercado/>*/}
             {/*resultado?.query && <ResultadoMercado/>*/}
+
+
+            <div>
+
+               
+            <p>{detalle.id}</p>
+            <p>{detalle.title}</p>
+            <p>${detalle.price}</p>
+            </div>
 
         </>
     )
